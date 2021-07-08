@@ -1,0 +1,10 @@
+.App {
+    background-image: url(./Assets/Mountain.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+}

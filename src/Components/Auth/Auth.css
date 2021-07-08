@@ -1,0 +1,24 @@
+#formWrapper:hover {
+    transform: scale(1.01);
+    transition: ease-in-out .5s;
+}
+
+#formWrapper:not(hover) {
+    transform: scale(1);
+    transition: ease-in-out 1s;
+}
+
+label {
+    user-select: none !important;
+}
+
+.form-control {
+    background: rgba(0, 0, 0, .2) !important;
+    color: white !important;
+    padding: 0 !important;
+}
+
+.is-invalid {
+    background: rgba(0, 0, 0, .1) !important;
+    padding: 0 !important;
+}
