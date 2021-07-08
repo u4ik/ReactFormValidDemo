@@ -5,7 +5,6 @@ import { Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap'
 import './Auth.css';
 
 const Auth = () => {
-
     const [signup, setSignup] = useState(true);
 
     const [email, setEmail] = useState('');
@@ -41,7 +40,6 @@ const Auth = () => {
     };
 
     const AuthInputs = () => {
-
         return (
             <>
                 <HeaderMsg signup={signup} />
@@ -99,7 +97,6 @@ const Auth = () => {
 
                             }}
                         />
-
                         <FormFeedback style={formFeedBackStyle}>
                             {
                                 cPassword.length === 0
@@ -113,36 +110,20 @@ const Auth = () => {
                                         null
                             }
                         </FormFeedback>
-
                     </FormGroup>
-
-
-
                 }
-
-
-
-
-
-
             </>
         )
-
     }
-
 
     return (
         <div style={formWrapper} id='formWrapper'>
-
             <Form>
-
                 {AuthInputs()}
-
                 <div style={{
                     display:'flex',
                     justifyContent:'space-between'
                 }}>
-
                     <Button onClick={() => {
                         setSignup(!signup)
                         setCPasswordValid(false)
@@ -167,9 +148,7 @@ const Auth = () => {
                 </div>
             </Form>
         </div>
-
     )
-
 }
 
 const HeaderMsg = props => {
@@ -177,7 +156,5 @@ const HeaderMsg = props => {
         <h2> {props.signup ? 'Signup' : 'Login'}</h2>
     )
 }
-
-
 
 export default Auth;
