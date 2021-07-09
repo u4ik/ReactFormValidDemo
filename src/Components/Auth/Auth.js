@@ -21,7 +21,7 @@ const Auth = () => {
         marginInline: '1em',
         width: '24em',
         minWidth: '12em',
-        background: theme === 'Dark' ? 'rgba(0,0,0,.5)' : 'rgba(255,255,255, .8)',
+        background: theme === 'Dark' ? 'rgba(0,0,0,.5)' : 'rgba(255,255,255, .6)',
         borderRadius: '1em',
         padding: '2em',
         backdropFilter: 'blur(15px)',
@@ -36,7 +36,9 @@ const Auth = () => {
     };
 
     const inputStyle = {
-        textAlign: 'center'
+        textAlign: 'center',
+        color: theme === 'Dark' ? 'white' : 'black'
+
     };
 
     const AuthInputs = () => {
@@ -121,30 +123,30 @@ const Auth = () => {
             <Form>
                 {AuthInputs()}
                 <div style={{
-                    display:'flex',
-                    justifyContent:'space-between'
+                    display: 'flex',
+                    justifyContent: 'space-between'
                 }}>
                     <Button onClick={() => {
                         setSignup(!signup)
                         setCPasswordValid(false)
                     }}>
-                        { signup ? 'Login' : 'Signup'}
+                        {signup ? 'Login' : 'Signup'}
                     </Button>
 
-                    <Button color={theme === 'Dark' ? 'dark' : 'light'  } onClick={() =>{
-                        theme === 'Dark' ? setTheme('Light') :setTheme('Dark')
+                    <Button color={theme === 'Dark' ? 'dark' : 'light'} onClick={() => {
+                        theme === 'Dark' ? setTheme('Light') : setTheme('Dark')
                     }}>
                         {theme}
                     </Button>
 
-                    {signup 
-                    ?
-                    <Button color='primary' type='submit' disabled={emailValid && passwordValid && cPasswordValid ? false : true}>
-                        Submit
-                    </Button>
-                    :
-                    <Button color='primary' type='submit' disable={emailValid && passwordValid ? false : true}>Submit</Button>
-                   }
+                    {signup
+                        ?
+                        <Button color='primary' type='submit' disabled={emailValid && passwordValid && cPasswordValid ? false : true}>
+                            Submit
+                        </Button>
+                        :
+                        <Button color='primary' type='submit' disable={emailValid && passwordValid ? false : true}>Submit</Button>
+                    }
                 </div>
             </Form>
         </div>

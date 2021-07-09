@@ -14,11 +14,23 @@ label {
 
 .form-control {
     background: rgba(0, 0, 0, .2) !important;
-    color: white !important;
+    /* color: white !important; */
     padding: 0 !important;
 }
 
 .is-invalid {
     background: rgba(0, 0, 0, .1) !important;
     padding: 0 !important;
+}
+
+#email {
+    transition: ease-in-out .5s;
+}
+
+#password {
+    transition: ease-in-out .5s;
+}
+
+#cPassword {
+    transition: ease-in-out .5s;
 }
