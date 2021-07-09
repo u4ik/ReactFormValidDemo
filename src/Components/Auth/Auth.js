@@ -145,7 +145,7 @@ const Auth = () => {
                             Submit
                         </Button>
                         :
-                        <Button color='primary' type='submit' disable={emailValid && passwordValid ? false : true}>Submit</Button>
+                        <Button color='primary' type='submit' disabled={emailValid && passwordValid ? false : true}>Submit</Button>
                     }
                 </div>
             </Form>
